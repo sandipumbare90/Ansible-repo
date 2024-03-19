@@ -1,0 +1,8 @@
+- name: my first ansible playbook
+  hosts: apps
+  become: true
+  tasks:
+    - name: apache install
+      apt:
+        name: apache2
+        state: present
