@@ -2,7 +2,7 @@
   hosts: apps
   become: true
   tasks:
-    - name: mysql-server Install
-      apt:
-        name: mysql-server
-        state: present
+    - name: Apache2 Install
+      service:
+        name: apache2
+        state: stopped
