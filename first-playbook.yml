@@ -10,13 +10,10 @@
     - name: Create a Directory
       file:
         path: /home/jenkins/demo
-        state: directory
-        mode: 0755
-        
+        owner: jenkins
+       
     - name: Create a File
       file:
         path: /home/jenkins/demo/demo.txt
-        state: touch
-        mode: 0644
-
+        owner: jenkins
 
