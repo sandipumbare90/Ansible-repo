@@ -6,3 +6,17 @@
       apt:
         name: apache2
         state: present
+
+    - name: Create a Directory
+      file:
+        path: /home/jenkins/demo
+        state: directory
+        mode: 0755
+        
+    - name: Create a File
+      file:
+        path: /home/jenkins/demo/demo.txt
+        state: touch
+        mode: 0644
+
+
