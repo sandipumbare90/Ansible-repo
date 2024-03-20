@@ -3,6 +3,6 @@
   become: true
   tasks:
     - name: Apache2 Install
-      service:
+      apt:
         name: apache2
-        state: stopped
+        state: present
