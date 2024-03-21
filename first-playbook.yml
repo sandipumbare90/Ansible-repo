@@ -20,4 +20,9 @@
       copy:
         dest: /home/jenkins/demo/demo.txt
         content: 'Hello World, Devops learning is fun'
+    - name: Add few more lines to same file
+      lineinfile:
+        path: /home/jenkins/demo/demo.txt
+        line: 'Lets spend time learning DevOps!!!'
+
 
