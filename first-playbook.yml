@@ -24,5 +24,13 @@
       lineinfile:
         path: /home/jenkins/demo/demo.txt
         line: 'Lets spend time learning DevOps!!!'
+    - name: Download Ops-Agent package
+      get_url:
+        url: https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
+        dest: /tmp
+        mode: 0755
+    - name: Install Ops Agent on managed node
+      command: /tmp/add-google-cloud-ops-agent-repo.sh --also-install
+
 
 
