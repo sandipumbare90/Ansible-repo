@@ -19,5 +19,5 @@
     - name: Add contents to demo.txt file
       copy:
         dest: /home/jenkins/demo/demo.txt
-        content: "Hello World, Devops learning is fun"
+        content: 'Hello World, Devops learning is fun'
 
