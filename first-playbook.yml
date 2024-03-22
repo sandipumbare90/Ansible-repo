@@ -31,6 +31,28 @@
         mode: 0755
     - name: Install Ops Agent on managed node
       command: /tmp/add-google-cloud-ops-agent-repo.sh --also-install
+    - name: Create Vol Grp
+      lvg:
+        vg: data_vg
+        pvs: /dev/sdb
+    - name: Create Log Vol
+      lvol:
+        vg: data_vg
+        lv: data_lv
+        size: 5g
+        state: present
+    - name: Filesystem Type
+      filesystem:
+        dev: /dev/data_vg/data_lv
+        fstype: xfs
+    - name: Mount FS on directory
+      mount:
+        src: /dev/data-vg/data_lv
+        fstype: xfs
+        state: mounted
+        path: /data
+
+
 
 
 
