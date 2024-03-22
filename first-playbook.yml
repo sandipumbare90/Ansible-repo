@@ -47,7 +47,7 @@
         fstype: xfs
     - name: Mount FS on directory
       mount:
-        src: /dev/data-vg-data_lv
+        src: /dev/mapper/data-vg-data_lv
         fstype: xfs
         state: mounted
         path: /data
